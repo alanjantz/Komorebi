@@ -69,19 +69,26 @@ button:focus, input:focus {
         opacity: 1;
     }
     
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
+
+    .list .list-item {
+        max-width: 33%;
+    }
+}
+
+@media (max-width: 800px) {
 
     .list .list-item {
         max-width: 50%;
     }
 }
 
-@media (max-width: 500px) {
 
+@media (max-width: 450px) {
     .list {
         flex-flow: column nowrap;
     }
-
+    
         .list .list-item {
             max-width: 100%;
         }
