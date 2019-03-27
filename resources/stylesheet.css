@@ -1,0 +1,107 @@
+﻿body {
+    margin: 0px;
+    background: #2B2B2B;
+    font-family: 'Roboto';
+}
+
+.main-block {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 50px 20px;
+    height: auto;
+    min-height: 100vh;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.not-growing-padding {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button:focus, input:focus {
+    outline: 0;
+}
+
+.transation-effect-1s {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.transation-effect-05s {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+/* Anime List
+--------------------------------*/
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+    .list .list-item {
+        width: 100%;
+        max-width: 25%;
+        padding: 10px;
+    }
+
+    .list:hover .anime-button {
+        opacity: .2;
+    }
+    
+    .list .anime-button {
+        opacity: .8;
+    }
+    
+    .list .anime-button:hover {
+        opacity: 1;
+    }
+    
+@media (max-width: 1000px) {
+
+    .list .list-item {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .list {
+        flex-flow: column nowrap;
+    }
+
+        .list .list-item {
+            max-width: 100%;
+        }
+}
+
+/* Anime Items
+--------------------------------*/
+
+.anime-button {
+    display: block;
+    background: red;
+    border: none;
+    font: inherit;
+    padding: 10px;
+    width: 100%;
+}
+
+.anime-button img {
+    width: 100%;
+}
+    .anime-button:hover {
+        cursor: pointer;
+    }
