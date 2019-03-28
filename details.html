@@ -2,10 +2,14 @@
 <head>
     <title>Komorebi - Anime List</title>
 
+    <link rel="stylesheet" href="resources/stylesheet.css">
     <link rel="stylesheet" href="resources/details.css">
     <script src="content/details.js"></script>
 </head>
 <body>
+    <button class="button-back" id="button-back"><a href="Index.html">Voltar</a></button>
+    <div id="image-background" class="image-background">
+    </div>
     <div class="main-block centered not-growing-padding">
         <div class="iframe-container">
             <iframe id="iframeDetails">
@@ -17,6 +21,11 @@
     <script>
         window.onload = function () {
             redirectToAnime('anime');
+            if (getParameterByName('min') == 1) {
+                document.body.style.background = 'transparent';
+                document.getElementById('image-background').hidden = true;
+                document.getElementById('button-back').hidden = true;
+            }
         }
     </script>
 </body>
