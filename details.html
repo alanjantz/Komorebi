@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Komorebi - Anime List</title>
+
+    <link rel="stylesheet" href="resources/details.css">
+    <script src="content/details.js"></script>
+</head>
+<body>
+    <div class="main-block centered not-growing-padding">
+        <div class="iframe-container">
+            <iframe onload="document.title=this.contentDocument? this.contentDocument.title : this.contentWindow.document.title" id="iframeDetails">
+                <p>Your browser does not support iframes.</p>
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            redirectToAnime('anime');
+        }
+    </script>
+</body>
+</html>

@@ -28,13 +28,13 @@
     }
 
 .modalBox {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     display: block;
     opacity: 1;
     position: absolute;
-    right: -810px;
+    right: -900px;
     top: 0;
-    width: 810px;
+    width: 900px;
     padding: 50px 25px;
     overflow-y: auto;
     -moz-box-sizing: border-box;
@@ -67,7 +67,7 @@
         height: 1.75em;
     }
 
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 900px) {
     .modalBox {
         position: fixed;
         top: 0;
@@ -83,6 +83,16 @@
 
     .iframe-container iframe {
         height: calc(100vh - 105px) !important;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .modalBox.ativo {
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 }
 

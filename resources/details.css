@@ -1,0 +1,14 @@
+.iframe-container iframe {
+    width: 100%;
+    height: calc(100vh - 100px);
+    border: 0;
+    overflow-x: hidden;
+}
+
+body {
+    color: white;
+}
+
+.detalhes {
+    color: white;
+}
