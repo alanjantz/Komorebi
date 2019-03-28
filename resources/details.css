@@ -6,9 +6,13 @@
 }
 
 body {
-    color: white;
+    color: black;
+}
+
+.minificado {
+    color: white !important;
 }
 
 .detalhes {
-    color: white;
+    color: black;
 }
