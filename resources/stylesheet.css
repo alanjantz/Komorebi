@@ -4,6 +4,15 @@
     font-family: 'Roboto';
 }
 
+::-webkit-scrollbar-thumb {
+    background: #4A545E;
+}
+    
+::-webkit-scrollbar {
+    width: 10px;
+    background: #1C1C1C;
+}
+
 .main-block {
     width: 100%;
     max-width: 1200px;

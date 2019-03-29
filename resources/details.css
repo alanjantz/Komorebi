@@ -3,20 +3,37 @@
     height: calc(100vh - 100px);
     border: 0;
     overflow: hidden;
+    margin-top: 50px;
 }
 
 body {
     font-family: 'Roboto';
+    overflow: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4A545E;
+}
+    
+::-webkit-scrollbar {
+    width: 5px;
+    background: #2B2B2B;
 }
 
 .main-block {
     background: transparent;
 }
 
+a {
+    text-decoration: none;
+    color: #4A545E;
+}
+
 .detail {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    margin-top: 200px;
+    margin-top: 150px;
     padding: 20px;
+    height: calc(100vh - 270px);
     background: rgba(0, 0, 0, 0.8);
     color: white;
     -webkit-border-radius: 5px;
@@ -33,16 +50,63 @@ body {
     z-index: -1;
 }
 
+.detail, .image-background {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
 .button-back {
     border: 0px;
     background: transparent;
     z-index: 999;
     position: fixed;
+    margin: 15px;
+}
+
+.button-back img {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    width: 24px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
 }
 
 .minificado .detail {
+    height: 100vh;
     box-shadow: none;
     margin-top: 0px;
     background: transparent;
     padding: 0px;
+    padding-right: 15px;
+    -webkit-transition: all 0s ease;
+    -moz-transition: all 0s ease;
+    -o-transition: all 0s ease;
+    transition: all 0s ease;
+}
+
+@media (max-width: 800px) {
+
+    .detail {
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+        height: calc(100vh - 100px);
+        margin-top: 0px;
+    }
+    
+    .detail, .image-background {
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+    }
+
+    
+    .image-background {
+        height: 210px;
+    }
 }
