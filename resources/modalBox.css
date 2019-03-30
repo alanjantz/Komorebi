@@ -1,5 +1,6 @@
 ﻿/* Modal
 ----------------------------- */
+
 .modal {
     display: block;
     position: fixed;
@@ -18,14 +19,14 @@
     transition: all 0.5s ease-in-out;
 }
 
-    .modal.ativo {
-        opacity: 1;
-        z-index: 1;
-        -webkit-transition: all 0.5s ease-in-out;
-        -moz-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out;
-    }
+.modal.ativo {
+    opacity: 1;
+    z-index: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
 
 .modalBox {
     background-color: #1C1C1C;
@@ -46,13 +47,13 @@
     transition: all 0.5s ease-in-out;
 }
 
-    .modalBox.ativo {
-        right: 0%;
-        -webkit-transition: all 1s ease-in-out;
-        -moz-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
-        transition: all 1s ease-in-out;
-    }
+.modalBox.ativo {
+    right: 0%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
 
 .close-modal {
     position: absolute;
@@ -62,10 +63,10 @@
     opacity: 1;
 }
 
-    .close-modal svg {
-        width: 1.75em;
-        height: 1.75em;
-    }
+.close-modal svg {
+    width: 1.75em;
+    height: 1.75em;
+}
 
 @media only screen and (max-width: 900px) {
     .modalBox {
@@ -80,12 +81,10 @@
         -webkit-overflow-scrolling: touch;
         padding: 50px 25px !important;
     }
-
     .iframe-container iframe {
         height: calc(100vh - 105px) !important;
     }
 }
-
 
 @media (max-width: 500px) {
     .modalBox.ativo {
