@@ -47,7 +47,7 @@ function createTable(paramName) {
         }
     ];
 
-    $('#content').append('<table id="episodiosList"><thead><tr></tr></thead><tbody></tbody></table>');
+    $('#content').append('<table id="episodiosList" cellspacing="0px"><thead><tr></tr></thead><tbody></tbody></table>');
 
     $.each(object, function (index, jsonObject) {
         if (Object.keys(jsonObject).length > 0) {

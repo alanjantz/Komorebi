@@ -1,5 +1,4 @@
 @import "stylesheet.css";
-
 body {
     font-family: 'Roboto';
     overflow: hidden;
@@ -89,4 +88,26 @@ a {
     .image-background {
         height: 210px;
     }
+}
+
+/* Tabela de episódios
+---------------------------------*/
+
+.conteudoAnime table {
+    width: 100%;
+    color: white;
+}
+
+.conteudoAnime table td {
+    margin: 10px 0;
+    border-bottom: 1px solid #4a545e;
+    line-height: 32px;
+}
+
+.conteudoAnime table td:first-child, .conteudoAnime table td:last-child {
+    width: 5%;
+}
+
+.conteudoAnime table tr:last-child td {
+    border-bottom: none;
 }

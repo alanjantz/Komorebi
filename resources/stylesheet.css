@@ -1,4 +1,6 @@
-﻿body {
+﻿@import "fonts.css";
+
+body {
     margin: 0px;
     background: #2B2B2B;
     font-family: 'Roboto';
