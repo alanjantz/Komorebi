@@ -24,7 +24,6 @@ function redirectToAnime(name) {
 
 function changeAnimeLink(paramName, animeLink) {
     var anime = getParameterByName(paramName);
-    console.log(anime);
 
     if (anime == null)
         return;
@@ -49,7 +48,7 @@ function createTable(episodios) {
                 else
                     tableRow += '<td class="' + key + '">' + jsonObject[key] + '</td>';
             });
-            
+
             tableRow += "</tr>";
 
             $('#episodiosList tbody').append(tableRow);
