@@ -11,7 +11,7 @@ function appendChild(elementId) {
 
   for (var i = 0; i < animes.length; i++) {
     var div = document.createElement("div");
-    div.innerHTML += `<button class="anime-button not-growing-padding transation-effect-05s" 
+    div.innerHTML += `<button class="anime-button not-growing-padding transation-effect-05s" value="` + animes[i].nome + `" 
                               onclick="trazerInformacoes('details.html?anime=` + animes[i].arquivo + `&min=1')">
                         <img class="transation-effect-1s" src="resources/images/covers/` + animes[i].arquivo + `.png"/>
                       </button>`;

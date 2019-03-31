@@ -137,6 +137,7 @@ a {
 
 /* Detalhes
 ---------------------------------*/
+
 .anime-details {
     -moz-webkit-transition-duration: .5s;
     -webkit-transition-duration: .5s;
@@ -192,7 +193,6 @@ a {
         -webkit-transition-duration: .5s;
         transition-duration: .5s;
     }
-
     .cover {
         margin-left: 0;
     }
