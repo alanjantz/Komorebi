@@ -47,7 +47,10 @@ a {
 }
 
 .detail h2 {
-    font-size: 30px;
+    font-family: 'Montserrat';
+    margin: 0px;
+    margin-bottom: 10px;
+    font-size: 35px;
 }
 
 .image-background {
@@ -132,6 +135,36 @@ a {
     }
 }
 
+/* Detalhes
+---------------------------------*/
+
+.categorias {
+    display: table-row;
+    list-style: none;
+}
+
+.categorias li {
+    margin-right: 10px;
+    font-weight: 700;
+    color: #FFF;
+    background: #3c4651;
+    padding: 3px 5px;
+    -moz-webkit-transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    float: left;
+}
+
+.categorias li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    -moz-webkit-transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+}
+
 /* Tabela de episódios
 ---------------------------------*/
 
@@ -147,12 +180,12 @@ a {
     line-height: 32px;
 }
 
-.conteudoAnime table td:first-child {
+.conteudoAnime table .Ep {
     color: #CCCCCC;
     text-align: right;
 }
 
-.conteudoAnime table td:first-child, .conteudoAnime table td:last-child {
+.conteudoAnime table .Ep, .conteudoAnime table .anime-checked {
     width: 5%;
 }
 
