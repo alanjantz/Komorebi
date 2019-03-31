@@ -35,9 +35,15 @@ var animes =
       "nome": "Death Parade",
       "categorias": ["Jogo", "Psicológico", "Seinen"],
       "favorito": false
+    },
+    {
+      "arquivo": "assassination-classroom",
+      "nome": "Ansatsu Kyoshitsu",
+      "categorias": ["Ação", "Comédia", "Escolar", "Shounen", "Sobrenatural"],
+      "favorito": true
     }
   ]
-
+  
 function appendChild(elementId) {
   var element = document.getElementById(elementId);
 

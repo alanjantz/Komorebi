@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="../resources/details.css">
+    <link rel="stylesheet" href="../resources/fonts.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../content/details.js"></script>
+</head>
+
+<body class="detalhes">
+    <content id="detalhes" class="detalhes">
+        <div class="detail not-growing-padding">
+            <div class="anime-details">
+                <div class="anime-header">
+                    <a id="animeLink" target="_top">
+                        <h2 ID="animeTitle">Ansatsu Kyoshitsu</h2>
+                        <h4>Assassination Classroom, Classe de assassinato</h4>
+                    </a>
+                    <ul id="categorias" class="categorias">
+                    </ul>
+                    <p>
+                        <b>Sinopse</b>: A história é sobre a classe 3-E do Colégio Kunugigaoka, onde todas as manhãs, os
+                        alunos cumprimentam seu sensei com um pelotão de fuzilamento em massa. O sensei é uma combinação
+                        estranha de um alienígena e um polvo que se move a velocidades de Mach-20. Acontece que essa
+                        criatura foi a responsável pela destruição da lua, tornando-a sempre em forma de lua crescente.
+                        Ele anunciou que vai destruir a Terra em 1 ano. A criatura vai ensinar a classe 3-E como
+                        assassiná-lo antes do ano terminar. Mas como pode esta classe de desajustados matar um monstro
+                        tentacular, capaz de atingir velocidade de Mach 20, e ser o melhor professor que qualquer um.
+                    </p>
+                    <p><b>Situação</b>: Assistido</p>
+                </div>
+                <div class="anime-poster not-growing-padding">
+                    <center><img id="poster" class="cover" /></center>
+                </div>
+            </div>
+            <div id="content" class="conteudoAnime">
+                <h3>
+                    Episódios
+                </h3>
+            </div>
+        </div>
+    </content>
+
+    <script>
+        window.onload = function () {
+            if (getParameterByName('min') == 1) {
+                document.getElementById('detalhes').classList.add('minificado');
+                changeAnimeLink('anime', 'animeLink');
+            }
+
+            definirPoster();
+
+            var temporadas = [
+                {
+                    "temporada": null,
+                    "ano": 2015,
+                    "episodios": [
+                        {
+                            "Ep": 1,
+                            "Nome": "Hora do Assassinato",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 2,
+                            "Nome": "Hora do Beisebol",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 3,
+                            "Nome": "Hora do Karma - Primeiro Período",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 4,
+                            "Nome": "Hora dos Adultos",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 5,
+                            "Nome": "Hora da Reunião",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 6,
+                            "Nome": "Hora das Provas",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 7,
+                            "Nome": "Hora da Viagem Escolar - Primeiro Período",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 8,
+                            "Nome": "Hora da Viagem Escolar - Segundo Período",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 9,
+                            "Nome": "Hora do Estudante Transferido - Primeiro Período",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 10,
+                            "Nome": "Hora dos Ls e dos Rs",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 11,
+                            "Nome": "Hora do Estudante Transferido - Segundo Período",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 12,
+                            "Nome": "Hora do Torneio",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 13,
+                            "Nome": "Hora do Talento",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 14,
+                            "Nome": "Hora da Visão",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 15,
+                            "Nome": "Hora do Fim Do Semestre",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 16,
+                            "Nome": "Fora da Escola",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 17,
+                            "Nome": "Hora da Ilha",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 18,
+                            "Nome": "Hora da Ação",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 19,
+                            "Nome": "Hora do Pandemônio",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 20,
+                            "Nome": "Hora do Karma - Segundo Período",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 21,
+                            "Nome": "Hora XX",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 22,
+                            "Nome": "Hora do Nagisa",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 23,
+                            "Nome": "A Classe de Assassinato <div class='ova'>OVA</div>",
+                            "Assistido": true,
+                        }
+                    ]
+                },
+                {
+                    "temporada": null,
+                    "ano": 2015,
+                    "episodios": [
+                        {
+                            "Ep": 1,
+                            "Nome": "Hora do Festival de Verão, por Hiroto Maehara",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 2,
+                            "Nome": " Hora da Kaede, por Tomohito Sugino",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 3,
+                            "Nome": "A Vez de Horibe Itona, por Horibe Itona",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 4,
+                            "Nome": "Hora de Crescer, por Kimura Masayoshi",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 5,
+                            "Nome": "Líder da Equipe, por Isogai Yuma",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 6,
+                            "Nome": "Antes e Depois, por Okajima Taiga",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 7,
+                            "Nome": "Hora de Ceifar - Primeiro Período, por Kotaoka Megu",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 8,
+                            "Nome": "Hora de Ceifar - Segundo Período, por Kotaoka Megu",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 9,
+                            "Nome": "Hora do Segundo Round, por Yada Toka",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 10,
+                            "Nome": "Hora do Festival Escolar, por Muramatsu Takuya",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 11,
+                            "Nome": "Final De Semestre, por Takebayashi Kotaro",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 12,
+                            "Nome": "Hora de Pensar Fora da Caixa, por Okuda Manami",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 13,
+                            "Nome": "Hora de Viver, por Fuwa Yuzuki",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 14,
+                            "Nome": "Hora da Identidade Secreta, por Hara Sumire",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 15,
+                            "Nome": "Hora da Confissão, por Hazama Kirara",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 16,
+                            "Nome": "Passado, por Kurahashi Hinano",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 17,
+                            "Nome": "Hora da Discórdia, por Yoshida Taisei",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 18,
+                            "Nome": "Hora do Resultado, por Sugaya Sosuke",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 19,
+                            "Nome": "Hora do Espaço Sideral",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 20,
+                            "Nome": "Hora do Dia dos Namorados, por Okano Hinata",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 21,
+                            "Nome": "Hora da Confiança, por Mimura Koki",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 22,
+                            "Nome": "Hora do Feliz Aniversário, por Kanzaki Yukiko e Najamura Rio",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 23,
+                            "Nome": "Hora do Chefão, por Chiba Ryonosuke e Hayami Rinka",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 24,
+                            "Nome": "Hora da Graduação, por Akabane Karma",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 25,
+                            "Nome": "Hora do Futuro, por Kayano Kaede e Shiota Nagisa",
+                            "Assistido": true,
+                        }
+                    ]
+                }
+            ]
+            createTable(temporadas);
+
+            var categorias = ["Ação", "Comédia", "Escolar", "Shounen", "Sobrenatural"];
+            adicionarCategorias(categorias);
+
+            marcarComoFavorito();
+        }
+    </script>
+</body>
+
+</html>
