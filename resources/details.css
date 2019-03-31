@@ -1,5 +1,4 @@
 @import "stylesheet.css";
-
 .iframe-container iframe {
     width: 100%;
     height: calc(100vh - 100px);
@@ -47,12 +46,20 @@ a {
     overflow: auto;
 }
 
+.detail h2 {
+    font-size: 30px;
+}
+
 .image-background {
-    background: url('http://i.imgur.com/piwwZ3D.jpg') center;
+    background: black;
     position: fixed;
     width: 100%;
     height: 350px;
     z-index: -1;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .button-back {
@@ -92,7 +99,11 @@ a {
     border-radius: 0px;
 }
 
-.detail, .image-background {
+.minificado .detail h2 {
+    font-size: 25px;
+}
+
+.detail {
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;
@@ -114,9 +125,15 @@ a {
 }
 
 .conteudoAnime table td {
+    padding: 5px;
     margin: 10px 0;
     border-bottom: 1px solid #4a545e;
     line-height: 32px;
+}
+
+.conteudoAnime table td:first-child {
+    color: #CCCCCC;
+    text-align: right;
 }
 
 .conteudoAnime table td:first-child, .conteudoAnime table td:last-child {

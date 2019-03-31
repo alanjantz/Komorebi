@@ -32,35 +32,10 @@ function changeAnimeLink(paramName, animeLink) {
     document.getElementById(animeLink).setAttribute("href", "../details.html?anime=" + anime);
 }
 
-function createTable(paramName) {
-    var anime = getParameterByName(paramName);
-
-    var object = [
-        {
-            "Ep": 1,
-            "Nome": "rooter",
-            "Assistido": "12345",
-        },
-        {
-            "Ep": 2,
-            "Nome": "rooter",
-            "Assistido": "12345",
-        },
-        {
-            "Ep": 3,
-            "Nome": "rooter",
-            "Assistido": "12345",
-        },
-        {
-            "Ep": 4,
-            "Nome": "rooter",
-            "Assistido": "12345",
-        }
-    ];
-
+function createTable(episodios) {
     $('#content').append('<table id="episodiosList" cellspacing="0px"><thead><tr></tr></thead><tbody></tbody></table>');
 
-    $.each(object, function (index, jsonObject) {
+    $.each(episodios, function (index, jsonObject) {
         if (Object.keys(jsonObject).length > 0) {
             var tableRow = '<tr>';
             $.each(Object.keys(jsonObject), function (i, key) {
@@ -70,4 +45,10 @@ function createTable(paramName) {
             $('#episodiosList tbody').append(tableRow);
         }
     });
+}
+
+function changeBackgroundPage(anime) {
+    var element = document.getElementById('image-background');
+
+    element.style.background = "url('resources/images/wallpapers/" + anime + ".png') center";
 }

@@ -33,6 +33,9 @@
                 document.getElementById('image-background').hidden = true;
                 document.getElementById('button-back').hidden = true;
             }
+            else {
+                changeBackgroundPage(getParameterByName('anime'));
+            }
 
             redirectToAnime('anime');
         }

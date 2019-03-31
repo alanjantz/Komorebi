@@ -14,18 +14,17 @@
 <body class="detalhes">
     <content id="detalhes" class="detalhes">
         <div class="detail not-growing-padding">
-            <a id="animeLink" target="_top">
-                <h2 id="numeroLivro">Livro 1</h2>
-            </a>
-            <br />
+            <div class="anime-header">
+                <a id="animeLink" target="_top">
+                    <h2>B: The Beginning</h2>
+                </a>
+            </div>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent luctus eu metus quis finibus.
-                Pellentesque volutpat lorem augue, ultrices scelerisque lorem sollicitudin in. Praesent a turpis orci.
-                Quisque sit amet posuere ligula, sodales placerat neque. Duis at dictum lorem. Nam quam eros, euismod
-                vel hendrerit nec, vulputate eget lorem. Donec ut purus feugiat, pretium lorem at, bibendum arcu. Nulla
-                eget sem in metus suscipit lobortis gravida quis lectus. Quisque ultricies erat libero, eu tincidunt
-                urna viverra nec. Integer id odio lorem. In in nunc cursus ante condimentum rutrum in in lacus. In
-                maximus felis at nunc efficitur mattis. In mollis cursus est in volutpat.
+                <b>Sinopse</b>: Em um mundo alimentado por tecnologia avançada, o crime e a ação se desenrolam na nação
+                arquipelágica de Cremona. Koku. O protagonista. Keith, é o lendário investigador da força de polícia
+                real RIS. Há uma misteriosa organização criminosa neste lugar. Uma grande variedade de personagens
+                passam através da cidade, assediados por um serial killer desconhecido e uma onda de crimes e
+                assassinatos.
             </p>
             <div id="content" class="conteudoAnime">
             </div>
@@ -39,7 +38,70 @@
                 changeAnimeLink('anime', 'animeLink');
             }
 
-            createTable('anime');
+            var episodios = [
+                {
+                    "Ep": 1,
+                    "Nome": "Episódio 1",
+                    "Assistido": true,
+                },
+                {
+                    "Ep": 2,
+                    "Nome": "Episódio 2",
+                    "Assistido": true,
+                },
+                {
+                    "Ep": 3,
+                    "Nome": "Episódio 3",
+                    "Assistido": true,
+                },
+                {
+                    "Ep": 4,
+                    "Nome": "Episódio 4",
+                    "Assistido": true,
+                },
+                {
+                    "Ep": 5,
+                    "Nome": "Episódio 5",
+                    "Assistido": true,
+                },
+                {
+                    "Ep": 6,
+                    "Nome": "Episódio 6",
+                    "Assistido": true,
+                },
+                {
+                    "Ep": 7,
+                    "Nome": "Episódio 7",
+                    "Assistido": true,
+                },
+                {
+                    "Ep": 8,
+                    "Nome": "Episódio 8",
+                    "Assistido": true,
+                },
+                {
+                    "Ep": 9,
+                    "Nome": "Episódio 9",
+                    "Assistido": true,
+                },
+                {
+                    "Ep": 10,
+                    "Nome": "Episódio 10",
+                    "Assistido": true,
+                },
+                {
+                    "Ep": 11,
+                    "Nome": "Episódio 11",
+                    "Assistido": true,
+                },
+                {
+                    "Ep": 12,
+                    "Nome": "Episódio 12",
+                    "Assistido": true,
+                }
+            ];
+
+            createTable(episodios);
         }
     </script>
 </body>
