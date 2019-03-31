@@ -23,6 +23,12 @@ var animes =
       "nome": "Another",
       "categorias": ["Drama", "Escolar", "Horror", "Mistério", "Psicológico"],
       "favorito": true
+    },
+    {
+      "arquivo": "charlotte",
+      "nome": "Charlotte",
+      "categorias": ["Escolar", "Superpoderes"],
+      "favorito": true
     }
   ]
 

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="../resources/details.css">
+    <link rel="stylesheet" href="../resources/fonts.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../content/details.js"></script>
+</head>
+
+<body class="detalhes">
+    <content id="detalhes" class="detalhes">
+        <div class="detail not-growing-padding">
+            <div class="anime-details">
+                <div class="anime-header">
+                    <a id="animeLink" target="_top">
+                        <h2 ID="animeTitle">Charlotte</h2>
+                    </a>
+                    <ul id="categorias" class="categorias">
+                    </ul>
+                    <p>
+                        <b>Sinopse</b>: A história gira em torno de habilidades especiais que ocorrem entre um pequeno
+                        percentual de meninos e meninas na puberdade. Yuu Otosaka usa seu poder sem os outros saberem, e
+                        vive uma vida escolar bastante normal. Perante ele, de repente, aparece uma menina, Nao Tomori.
+                        Devido ao seu encontro com ela, o destino dos usuários de poderes especiais será exposto.
+                    </p>
+                    <p><b>Situação</b>: Assistido</p>
+                </div>
+                <div class="anime-poster not-growing-padding">
+                    <center><img id="poster" class="cover" /></center>
+                </div>
+            </div>
+            <div id="content" class="conteudoAnime">
+                <h3>
+                    Episódios
+                </h3>
+            </div>
+        </div>
+    </content>
+
+    <script>
+        window.onload = function () {
+            if (getParameterByName('min') == 1) {
+                document.getElementById('detalhes').classList.add('minificado');
+                changeAnimeLink('anime', 'animeLink');
+            }
+
+            definirPoster();
+
+            var temporadas = [
+                {
+                    "temporada": null,
+                    "ano": 2015,
+                    "episodios": [
+                        {
+                            "Ep": 1,
+                            "Nome": "Eu penso nos outros",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 2,
+                            "Nome": "Melodia do desespero",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 3,
+                            "Nome": "Amor e chama",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 4,
+                            "Nome": "Momentos de sinceridade",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 5,
+                            "Nome": "O som que você ouvia às vezes",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 6,
+                            "Nome": "Fico feliz que não percebeu",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 7,
+                            "Nome": "O fim do êxodo",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 8,
+                            "Nome": "Confronto",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 9,
+                            "Nome": "O mundo não está aqui",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 10,
+                            "Nome": "Pilhagens",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 11,
+                            "Nome": "Charlotte",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 12,
+                            "Nome": "Promessa",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 13,
+                            "Nome": "Memórias a Construir",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 14,
+                            "Nome": "Pessoas Fortes <div class='ova'>OVA</div>",
+                            "Assistido": true,
+                        }
+                    ]
+                }
+            ]
+            createTable(temporadas);
+
+            var categorias = ["Escolar", "Superpoderes"];
+            adicionarCategorias(categorias);
+
+            marcarComoFavorito();
+        }
+    </script>
+</body>
+
+</html>
