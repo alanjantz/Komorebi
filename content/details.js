@@ -38,12 +38,14 @@ function createTable(temporadas) {
 
         $('#content').append('<table id="' + idCorrente + '" cellspacing="0px"><thead><tr class="anime-list-header"></tr></thead><tbody></tbody></table>');
 
-        $('#' + idCorrente + ' thead tr').append('<th>' + (temporadas[temporada].episodios.length) + '</th>');
+        var currentElement = $('#' + idCorrente + ' thead tr');
+
+        currentElement.append('<th>' + (temporadas[temporada].episodios.length) + '</th>');
         if (temporadas[temporada].temporada == null || temporadas[temporada].temporada == '')
-            $('#' + idCorrente + ' thead tr').append('<th>Temporada ' + (temporada + 1) + '</th>');
+            currentElement.append('<th>Temporada ' + (temporada + 1) + '</th>');
         else
-            $('#' + idCorrente + ' thead tr').append('<th>' + temporadas[temporada].temporada + '</th>');
-        $('#' + idCorrente + ' thead tr').append('<th>' + (temporadas[temporada].ano) + '</th>');
+            currentElement.append('<th>' + temporadas[temporada].temporada + '</th>');
+        currentElement.append('<th>' + (temporadas[temporada].ano) + '</th>');
 
         $.each(temporadas[temporada].episodios, function (index, jsonObject) {
             if (Object.keys(jsonObject).length > 0) {

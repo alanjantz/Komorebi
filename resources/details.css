@@ -231,14 +231,18 @@ a {
 }
 
 .anime-list-header th {
-    text-align: left;   
+    text-align: left;
     background: #4a545e;
 }
 
 .anime-list-header th:first-child {
-    text-align: right;   
+    text-align: right;
     font-weight: normal;
     padding-right: 10px;
+}
+
+.anime-list-header th:last-child, .anime-checked  {
+    text-align: center;
 }
 
 .conteudoAnime table td {
