@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="../resources/details.css">
+    <link rel="stylesheet" href="../resources/fonts.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../content/details.js"></script>
+</head>
+
+<body class="detalhes">
+    <content id="detalhes" class="detalhes">
+        <div class="detail not-growing-padding">
+            <div class="anime-details">
+                <div class="anime-header">
+                    <a id="animeLink" target="_top">
+                        <h2 ID="animeTitle">Noragami</h2>
+                        <h4>Deus Perdido</h4>
+                    </a>
+                    <ul id="categorias" class="categorias">
+                    </ul>
+                    <p>
+                        <b>Sinopse</b>: A história começa por Yato, um deus menor cujo sonho é ter milhões de
+                        seguidores. Infelizmente, seu sonho está longe de se tornar realidade, visto que sequer tem um
+                        santuário dedicado ao seu nome e se encontra sem nenhum Instrumento Divino, depois que seu
+                        último se demitiu após 3 meses de parceria. Neste cenário, Yato se depara com Hiyori, uma garota
+                        que secretamente é fã de artes marciais. Em seu primeiro encontro com ela, Yato é “salvo” quando
+                        Hiyori impede que ele seja atingindo por um caminhão, mas ela é atingida em seu lugar. A partir
+                        desse momento, Hiyori se encontra entre dois mundos. O que acontecerá?
+                    </p>
+                    <p><b>Situação</b>: Assistido</p>
+                </div>
+                <div class="anime-poster not-growing-padding">
+                    <center><img id="poster" class="cover" /></center>
+                </div>
+            </div>
+            <div id="content" class="conteudoAnime">
+                <h3>
+                    Episódios
+                </h3>
+            </div>
+        </div>
+    </content>
+
+    <script>
+        window.onload = function () {
+            if (getParameterByName('min') == 1) {
+                document.getElementById('detalhes').classList.add('minificado');
+                changeAnimeLink('anime', 'animeLink');
+            }
+
+            definirPoster();
+
+            var temporadas = [
+                {
+                    "temporada": null,
+                    "ano": 2014,
+                    "episodios": [
+                        {
+                            "Ep": 1,
+                            "Nome": "Um Gato, um Deus Perdido e uma Cauda",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 2,
+                            "Nome": "Como Neve",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 3,
+                            "Nome": "Calamidade Escondida",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 4,
+                            "Nome": "Onde a Felicidade se Encontra",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 5,
+                            "Nome": "Fronteira",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 6,
+                            "Nome": "Pessoa Assustadora",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 7,
+                            "Nome": "Incerteza e Destino",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 8,
+                            "Nome": "Ao Longo da Linha",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 9,
+                            "Nome": "Nome",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 10,
+                            "Nome": "Considerado com Ódio",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 11,
+                            "Nome": "Deus Abandonado",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 12,
+                            "Nome": "Sucata de uma Memória",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 13,
+                            "Nome": "Posse de Deus, Maldição de Deus <div class='ova'>OVA</div>",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 12,
+                            "Nome": "Uma Promessa na Primavera <div class='ova'>OVA</div>",
+                            "Assistido": true,
+                        }
+                    ]
+                },
+                {
+                    "temporada": "Aragoto",
+                    "ano": 2015,
+                    "episodios": [
+                        {
+                            "Ep": 1,
+                            "Nome": "Portador de um Nome Póstumo",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 2,
+                            "Nome": "Uma das Memórias Dela",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 3,
+                            "Nome": "Ligação Falsa",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 4,
+                            "Nome": "Desejo",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 5,
+                            "Nome": "Aclamação Divina, Imprecação",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 6,
+                            "Nome": "O Que Deve Ser Feito",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 7,
+                            "Nome": "Como Adorar um Deus",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 8,
+                            "Nome": "Deus da Calamidade",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 9,
+                            "Nome": "O Som de um Ajuste de Linha",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 10,
+                            "Nome": "Um Destino Certeiro",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 11,
+                            "Nome": "Renascimento",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 12,
+                            "Nome": "Suas Chamadas de Voz",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 13,
+                            "Nome": "A Mensagem do Deus da Fortuna",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 14,
+                            "Nome": "O Incidente do Assasino Serial Yatogami do Teatro de Suspense Noragami <div class='ova'>OVA</div>",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 15,
+                            "Nome": "Uma Foto Juntos <div class='ova'>OVA</div>",
+                            "Assistido": true,
+                        }
+                    ]
+                }
+            ]
+            createTable(temporadas);
+
+            var categorias = ["Ação", "Shounen", "Sobrenatural"];
+            adicionarCategorias(categorias);
+
+            marcarComoFavorito();
+        }
+    </script>
+</body>
+
+</html>

@@ -41,6 +41,12 @@ var animes =
       "nome": "Ansatsu Kyoshitsu",
       "categorias": ["Ação", "Comédia", "Escolar", "Shounen", "Sobrenatural"],
       "favorito": true
+    },
+    {
+      "arquivo": "noragami",
+      "nome": "Noragami",
+      "categorias": ["Ação", "Shounen", "Sobrenatural"],
+      "favorito": true
     }
   ]
   
