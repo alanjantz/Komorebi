@@ -38,10 +38,20 @@ function createTable(episodios) {
     $.each(episodios, function (index, jsonObject) {
         if (Object.keys(jsonObject).length > 0) {
             var tableRow = '<tr>';
+
             $.each(Object.keys(jsonObject), function (i, key) {
-                tableRow += '<td>' + jsonObject[key] + '</td>';
+                if (key == 'Assistido') {
+                    if (jsonObject[key] === true)
+                        tableRow += '<td class="anime-checked" title="Assistido"><img src="../resources/images/checked.png"/></td>';
+                    else
+                        tableRow += '<td class="anime-checked"></td>';
+                }
+                else
+                    tableRow += '<td class="' + key + '">' + jsonObject[key] + '</td>';
             });
+            
             tableRow += "</tr>";
+
             $('#episodiosList tbody').append(tableRow);
         }
     });
