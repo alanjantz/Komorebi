@@ -181,6 +181,7 @@ a {
     -moz-border-radius: 5px;
     border-radius: 5px;
     float: left;
+    margin-top: 5px;
 }
 
 .categorias li:hover {
@@ -266,4 +267,10 @@ a {
     width: 20px;
     margin-top: 5px;
     margin-bottom: -5px;
+}
+
+.ova {
+    display: inline;
+    font-weight: bolder;
+    color: #4A545E;
 }

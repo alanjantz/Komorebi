@@ -3,13 +3,17 @@ var animes =
     {
       "arquivo": "b-the-beginning",
       "nome": "B: The Beginning",
+    },
+    {
+      "arquivo": "ajin",
+      "nome": "Ajin",
     }
   ]
 
 function appendChild(elementId) {
   var element = document.getElementById(elementId);
 
-  animes.sort();
+  animes.sort(SortByName);
 
   for (var i = 0; i < animes.length; i++) {
     var div = document.createElement("div");
@@ -21,4 +25,8 @@ function appendChild(elementId) {
 
     element.appendChild(div);
   }
+}
+
+function SortByName(x,y) {
+  return ((x.nome == y.nome) ? 0 : ((x.nome > y.nome) ? 1 : -1 ));
 }

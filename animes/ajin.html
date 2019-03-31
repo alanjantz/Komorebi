@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="../resources/details.css">
+    <link rel="stylesheet" href="../resources/fonts.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../content/details.js"></script>
+</head>
+
+<body class="detalhes">
+    <content id="detalhes" class="detalhes">
+        <div class="detail not-growing-padding">
+            <div class="anime-details">
+                <div class="anime-header">
+                    <a id="animeLink" target="_top">
+                        <h2>Ajin</h2>
+                    </a>
+                    <ul id="categorias" class="categorias">
+                    </ul>
+                    <p>
+                        <b>Sinopse</b>: Ajin são humanos que não podem morrer. 17 anos atrás, eles apareceram pela
+                        primeira vez em um campo de batalha na Africa. A partir daí, mais de sua espécie são descobertos
+                        na (dentro da) sociedade humana. Sua raridade em aparecer fez com que, para fins experimentais,
+                        o governo oferecesse uma recompensa generosa para quem capturasse um. No presente, um estudante
+                        do ensino médio que espera ter um feriado de verão comum, está prestes a ter a sua vida
+                        transformada em algo inesperado
+                    </p>
+                    <p><b>Situação</b>: Assistido</p>
+                </div>
+                <div class="anime-poster not-growing-padding">
+                    <center><img class="cover" src="../resources/images/covers/ajin.png" /></center>
+                </div>
+            </div>
+            <div id="content" class="conteudoAnime">
+                <h3>
+                    Episódios
+                </h3>
+            </div>
+        </div>
+    </content>
+
+    <script>
+        window.onload = function () {
+            if (getParameterByName('min') == 1) {
+                document.getElementById('detalhes').classList.add('minificado');
+                changeAnimeLink('anime', 'animeLink');
+            }
+
+            var temporadas = [
+                {
+                    "temporada": null,
+                    "ano": 2016,
+                    "episodios": [
+                        {
+                            "Ep": 1,
+                            "Nome": "O que essas coisas tem a ver conosco?",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 2,
+                            "Nome": "Por que isto está acontecendo? Por que comigo...",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 3,
+                            "Nome": "Talvez este seja o fim?",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 4,
+                            "Nome": "Você já viu o fantasma preto?",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 5,
+                            "Nome": "Mas quando se trata disso, você ainda quer que eles o ajudem... Você é o pior tipo de lixo...",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 6,
+                            "Nome": "Eu também vou te matar",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 7,
+                            "Nome": "Eu juro que vou cobrir isto tudo",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 8,
+                            "Nome": "Preparem-se",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 9,
+                            "Nome": "Calma, vamos conversar sobre isto",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 10,
+                            "Nome": "Eles começam a decair assim que foram criados",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 11,
+                            "Nome": "É hora do show!",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 12,
+                            "Nome": "Nossa, estou cansado",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 13,
+                            "Nome": "Sato, é tudo culpa sua!",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 14,
+                            "Nome": "O Incidente De Nakamura Shinya <div class='ova'>OVA</div>",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 15,
+                            "Nome": "Pousada escondida / antro secreto <div class='ova'>OVA</div>",
+                            "Assistido": true,
+                        }
+                    ]
+                },
+                {
+                    "temporada": null,
+                    "ano": 2016,
+                    "episodios": [
+                        {
+                            "Ep": 1,
+                            "Nome": "Estou ficando cansado disso",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 2,
+                            "Nome": "Estou cercado por idiotas!",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 3,
+                            "Nome": "Mas, eu estuo sempre com medo",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 4,
+                            "Nome": "Eles me deixam doente",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 5,
+                            "Nome": "Kuro, por favor...",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 6,
+                            "Nome": "Deve ser difícil ser um cachorrinho",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 7,
+                            "Nome": "Juro, apenas mais uma vez, por favor!",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 8,
+                            "Nome": "Este país ficará um pouco instável",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 9,
+                            "Nome": "Você é aquele bagunçando a minha vida",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 10,
+                            "Nome": "Eu não farei isto",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 11,
+                            "Nome": "Nesta altura, realmente será uma guerra!",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 12,
+                            "Nome": "Mas isso deixa tudo mais interessante, então que seja",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 13,
+                            "Nome": "Eu também lhe farei uma promessa, Sr. Sato",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 14,
+                            "Nome": "Satō:ZERO <div class='ova'>OVA</div>",
+                            "Assistido": true,
+                        }
+                    ]
+                }
+            ]
+            createTable(temporadas);
+
+            var categorias = ["Horror", "Mistério", "Seinen", "Sobrenatural"];
+            adicionarCategorias(categorias);
+        }
+    </script>
+</body>
+
+</html>

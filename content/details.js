@@ -42,7 +42,7 @@ function createTable(temporadas) {
 
         currentElement.append('<th>' + (temporadas[temporada].episodios.length) + '</th>');
         if (temporadas[temporada].temporada == null || temporadas[temporada].temporada == '')
-            currentElement.append('<th>Temporada ' + (temporada + 1) + '</th>');
+            currentElement.append('<th>' + (temporada + 1) + 'ª Temporada</th>');
         else
             currentElement.append('<th>' + temporadas[temporada].temporada + '</th>');
         currentElement.append('<th>' + (temporadas[temporada].ano) + '</th>');
