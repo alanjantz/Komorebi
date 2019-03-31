@@ -46,10 +46,19 @@ a {
     overflow: auto;
 }
 
-.detail h2 {
-    font-family: 'Montserrat';
+.detail h2, .detail h4 {
     margin: 0px;
+    font-family: 'Montserrat';
+}
+
+.detail h4 {
     margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #CCCCCC;
+}
+
+.detail h2 {
     font-size: 35px;
 }
 
@@ -155,6 +164,10 @@ a {
 }
 
 .categorias li {
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
     margin-right: 10px;
     margin-bottom: 10px;
     font-weight: 700;
