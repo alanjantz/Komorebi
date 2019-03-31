@@ -219,17 +219,30 @@ a {
 
 /* Tabela de episódios
 ---------------------------------*/
-
 .conteudoAnime table {
     width: 100%;
     color: white;
 }
 
-.conteudoAnime table td {
+.conteudoAnime table td, .anime-list-header {
     padding: 5px;
     margin: 10px 0;
-    border-bottom: 1px solid #4a545e;
     line-height: 32px;
+}
+
+.anime-list-header th {
+    text-align: left;   
+    background: #4a545e;
+}
+
+.anime-list-header th:first-child {
+    text-align: right;   
+    font-weight: normal;
+    padding-right: 10px;
+}
+
+.conteudoAnime table td {
+    border-bottom: 1px solid #4a545e;
 }
 
 .conteudoAnime table .Ep {

@@ -31,29 +31,38 @@ function changeAnimeLink(paramName, animeLink) {
     document.getElementById(animeLink).setAttribute("href", "../details.html?anime=" + anime);
 }
 
-function createTable(episodios) {
-    $('#content').append('<table id="episodiosList" cellspacing="0px"><thead><tr></tr></thead><tbody></tbody></table>');
+function createTable(temporadas) {
 
-    $.each(episodios, function (index, jsonObject) {
-        if (Object.keys(jsonObject).length > 0) {
-            var tableRow = '<tr>';
+    for (var temporada = 0; temporada < temporadas.length; temporada++) {
+        var idCorrente = 'episodiosList' + (temporada + 1);
 
-            $.each(Object.keys(jsonObject), function (i, key) {
-                if (key == 'Assistido') {
-                    if (jsonObject[key] === true)
-                        tableRow += '<td class="anime-checked" title="Assistido"><img src="../resources/images/checked.png"/></td>';
+        $('#content').append('<table id="' + idCorrente + '" cellspacing="0px"><thead><tr class="anime-list-header"></tr></thead><tbody></tbody></table>');
+
+        $('#' + idCorrente + ' thead tr').append('<th>' + (temporadas[temporada].episodios.length) + '</th>');
+        $('#' + idCorrente + ' thead tr').append('<th>Temporada ' + (temporada + 1) + '</th>');
+        $('#' + idCorrente + ' thead tr').append('<th>' + (temporadas[temporada].ano) + '</th>');
+
+        $.each(temporadas[temporada].episodios, function (index, jsonObject) {
+            if (Object.keys(jsonObject).length > 0) {
+                var tableRow = '<tr>';
+
+                $.each(Object.keys(jsonObject), function (i, key) {
+                    if (key == 'Assistido') {
+                        if (jsonObject[key] === true)
+                            tableRow += '<td class="anime-checked" title="Assistido"><img src="../resources/images/checked.png"/></td>';
+                        else
+                            tableRow += '<td class="anime-checked"></td>';
+                    }
                     else
-                        tableRow += '<td class="anime-checked"></td>';
-                }
-                else
-                    tableRow += '<td class="' + key + '">' + jsonObject[key] + '</td>';
-            });
+                        tableRow += '<td class="' + key + '">' + jsonObject[key] + '</td>';
+                });
 
-            tableRow += "</tr>";
+                tableRow += "</tr>";
 
-            $('#episodiosList tbody').append(tableRow);
-        }
-    });
+                $('#' + idCorrente + ' tbody').append(tableRow);
+            }
+        });
+    }
 }
 
 function changeBackgroundPage(anime) {
