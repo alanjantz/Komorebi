@@ -137,6 +137,16 @@ a {
 
 /* Detalhes
 ---------------------------------*/
+.anime-details {
+    -moz-webkit-transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    display: flex;
+}
+
+.anime-header, .anime-poster {
+    flex-direction: row;
+}
 
 .categorias {
     display: table-row;
@@ -145,6 +155,7 @@ a {
 
 .categorias li {
     margin-right: 10px;
+    margin-bottom: 10px;
     font-weight: 700;
     color: #FFF;
     background: #3c4651;
@@ -163,6 +174,34 @@ a {
     -moz-webkit-transition-duration: .5s;
     -webkit-transition-duration: .5s;
     transition-duration: .5s;
+}
+
+.cover {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 700px) {
+    .anime-details {
+        flex-direction: column-reverse;
+        justify-content: center;
+        -moz-webkit-transition-duration: .5s;
+        -webkit-transition-duration: .5s;
+        transition-duration: .5s;
+    }
+
+    .cover {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 340px) {
+    .cover {
+        width: 100%;
+    }
 }
 
 /* Tabela de episódios
