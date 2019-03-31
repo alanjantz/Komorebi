@@ -3,10 +3,20 @@ var animes =
     {
       "arquivo": "b-the-beginning",
       "nome": "B: The Beginning",
+      "categorias": ["Ação", "Sci-Fi", "Superpoderes", "Suspense"],
+      "favorito": false
     },
     {
       "arquivo": "ajin",
       "nome": "Ajin",
+      "categorias": ["Horror", "Mistério", "Seinen", "Sobrenatural"],
+      "favorito": false
+    },
+    {
+      "arquivo": "angel-beats",
+      "nome": "Angel Beats!",
+      "categorias": ["Ação", "Comédia", "Drama", "Romance", "Sobrenatural"],
+      "favorito": true
     }
   ]
 
@@ -27,6 +37,6 @@ function appendChild(elementId) {
   }
 }
 
-function SortByName(x,y) {
-  return ((x.nome == y.nome) ? 0 : ((x.nome > y.nome) ? 1 : -1 ));
+function SortByName(x, y) {
+  return ((x.nome == y.nome) ? 0 : ((x.nome > y.nome) ? 1 : -1));
 }

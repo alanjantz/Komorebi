@@ -89,3 +89,14 @@ function adicionarElemento(texto) {
     node.appendChild(textnode);
     document.getElementById("categorias").appendChild(node);
 }
+
+function marcarComoFavorito() {
+    document.getElementById('animeTitle').innerHTML += (' <img src="../resources/images/favorite.png" title="Favorito"/>');
+}
+
+function definirPoster() {
+    var anime = getParameterByName('anime');
+
+    if (anime != null)
+        document.getElementById('poster').setAttribute("src", "../resources/images/covers/" + anime + '.png');
+}

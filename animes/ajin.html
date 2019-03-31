@@ -32,7 +32,7 @@
                     <p><b>Situação</b>: Assistido</p>
                 </div>
                 <div class="anime-poster not-growing-padding">
-                    <center><img class="cover" src="../resources/images/covers/ajin.png" /></center>
+                    <center><img id="poster" class="cover" /></center>
                 </div>
             </div>
             <div id="content" class="conteudoAnime">
@@ -49,6 +49,8 @@
                 document.getElementById('detalhes').classList.add('minificado');
                 changeAnimeLink('anime', 'animeLink');
             }
+
+            definirPoster();
 
             var temporadas = [
                 {
