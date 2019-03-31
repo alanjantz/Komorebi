@@ -29,6 +29,12 @@ var animes =
       "nome": "Charlotte",
       "categorias": ["Escolar", "Superpoderes"],
       "favorito": true
+    },
+    {
+      "arquivo": "death-parade",
+      "nome": "Death Parade",
+      "categorias": ["Jogo", "Psicológico", "Seinen"],
+      "favorito": false
     }
   ]
 

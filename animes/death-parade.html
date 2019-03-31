@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="../resources/details.css">
+    <link rel="stylesheet" href="../resources/fonts.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../content/details.js"></script>
+</head>
+
+<body class="detalhes">
+    <content id="detalhes" class="detalhes">
+        <div class="detail not-growing-padding">
+            <div class="anime-details">
+                <div class="anime-header">
+                    <a id="animeLink" target="_top">
+                        <h2 ID="animeTitle">Death Parade</h2>
+                        <h4>Parada da morte</h4>
+                    </a>
+                    <ul id="categorias" class="categorias">
+                    </ul>
+                    <p>
+                        <b>Sinopse</b>: A história gira em torno de habilidades especiais que ocorrem entre um pequeno
+                        percentual de meninos e meninas na puberdade. Yuu Otosaka usa seu poder sem os outros saberem, e
+                        vive uma vida escolar bastante normal. Perante ele, de repente, aparece uma menina, Nao Tomori.
+                        Devido ao seu encontro com ela, o destino dos usuários de poderes especiais será exposto.
+                    </p>
+                    <p><b>Situação</b>: Assistido</p>
+                </div>
+                <div class="anime-poster not-growing-padding">
+                    <center><img id="poster" class="cover" /></center>
+                </div>
+            </div>
+            <div id="content" class="conteudoAnime">
+                <h3>
+                    Episódios
+                </h3>
+            </div>
+        </div>
+    </content>
+
+    <script>
+        window.onload = function () {
+            if (getParameterByName('min') == 1) {
+                document.getElementById('detalhes').classList.add('minificado');
+                changeAnimeLink('anime', 'animeLink');
+            }
+
+            definirPoster();
+
+            var temporadas = [
+                {
+                    "temporada": null,
+                    "ano": 2015,
+                    "episodios": [
+                        {
+                            "Ep": 1,
+                            "Nome": "Sete Dardos da Morte",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 2,
+                            "Nome": "Morte Reversa",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 3,
+                            "Nome": "Balançando a Balada",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 4,
+                            "Nome": "Arcada da Morte",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 5,
+                            "Nome": "Marcha da Morte",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 6,
+                            "Nome": "Ataque Cardíaco Cruzado",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 7,
+                            "Nome": "Veneno de Álcool",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 8,
+                            "Nome": "Comício da Morte",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 9,
+                            "Nome": "Contador da Morte",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 10,
+                            "Nome": "Contador de Histórias",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 11,
+                            "Nome": "Memento Mori",
+                            "Assistido": true,
+                        },
+                        {
+                            "Ep": 12,
+                            "Nome": "Tour Suicida",
+                            "Assistido": true,
+                        }
+                    ]
+                }
+            ]
+            createTable(temporadas);
+
+            var categorias = ["Jogo", "Psicológico", "Seinen"];
+            adicionarCategorias(categorias);
+        }
+    </script>
+</body>
+
+</html>
