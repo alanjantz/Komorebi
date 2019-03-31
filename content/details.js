@@ -50,5 +50,5 @@ function createTable(episodios) {
 function changeBackgroundPage(anime) {
     var element = document.getElementById('image-background');
 
-    element.style.background = "url('resources/images/wallpapers/" + anime + ".png') center";
+    element.style.backgroundImage = "url('resources/images/wallpapers/" + anime + ".png')";
 }
