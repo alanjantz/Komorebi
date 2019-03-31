@@ -17,6 +17,12 @@ var animes =
       "nome": "Angel Beats!",
       "categorias": ["Ação", "Comédia", "Drama", "Romance", "Sobrenatural"],
       "favorito": true
+    },
+    {
+      "arquivo": "another",
+      "nome": "Another",
+      "categorias": ["Drama", "Escolar", "Horror", "Mistério", "Psicológico"],
+      "favorito": true
     }
   ]
 
