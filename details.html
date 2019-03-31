@@ -9,32 +9,18 @@
 
 <body>
     <button class="button-back" id="button-back">
-        <a onclick="window.history.go(-1); return false;" style="cursor: pointer;"><img
-                src="resources/images/arrow-point-to-right.png" /></a>
+        <a onclick="window.history.go(-1); return false;" style="cursor: pointer;">
+            <img src="resources/images/arrow-point-to-right.png" />
+        </a>
     </button>
     <div id="image-background" class="image-background">
     </div>
-    <div class="main-block centered not-growing-padding">
-        <content id="detalhes" class="detalhes">
-            <div class="detail not-growing-padding">
-                <a href="details.html?anime=example" target="_top">
-                    <h2 id="numeroLivro">Livro 1</h2>
-                </a>
-                <div class="conteudoAnime" id="content">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent luctus eu metus quis finibus.
-                        Pellentesque volutpat lorem augue, ultrices scelerisque lorem sollicitudin in. Praesent a turpis
-                        orci. Quisque sit amet posuere ligula, sodales placerat neque. Duis at dictum lorem. Nam quam
-                        eros,
-                        euismod vel hendrerit nec, vulputate eget lorem. Donec ut purus feugiat, pretium lorem at,
-                        bibendum
-                        arcu. Nulla eget sem in metus suscipit lobortis gravida quis lectus. Quisque ultricies erat
-                        libero,
-                        eu tincidunt urna viverra nec. Integer id odio lorem. In in nunc cursus ante condimentum rutrum
-                        in
-                        in lacus. In maximus felis at nunc efficitur mattis. In mollis cursus est in volutpat.
-                    </p>
-                </div>
+    <div id="detalhes" class="main-block centered not-growing-padding">
+        <content class="detalhes">
+            <div class="iframe-container">
+                <iframe id="iframeDetails">
+                    <p>Your browser does not support iframes.</p>
+                </iframe>
             </div>
         </content>
     </div>
@@ -47,6 +33,8 @@
                 document.getElementById('image-background').hidden = true;
                 document.getElementById('button-back').hidden = true;
             }
+
+            redirectToAnime('anime');
             createTable('anime');
         }
     </script>

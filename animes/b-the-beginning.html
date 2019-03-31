@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="../resources/details.css">
+    <link rel="stylesheet" href="../resources/fonts.css">
+    <script src="../content/details.js"></script>
+</head>
+
+<body class="detalhes">
+    <content id="detalhes" class="detalhes">
+        <div class="detail not-growing-padding">
+            <a id="animeLink" target="_top">
+                <h2 id="numeroLivro">Livro 1</h2>
+            </a>
+            <br />
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent luctus eu metus quis finibus.
+                Pellentesque volutpat lorem augue, ultrices scelerisque lorem sollicitudin in. Praesent a turpis orci.
+                Quisque sit amet posuere ligula, sodales placerat neque. Duis at dictum lorem. Nam quam eros, euismod
+                vel hendrerit nec, vulputate eget lorem. Donec ut purus feugiat, pretium lorem at, bibendum arcu. Nulla
+                eget sem in metus suscipit lobortis gravida quis lectus. Quisque ultricies erat libero, eu tincidunt
+                urna viverra nec. Integer id odio lorem. In in nunc cursus ante condimentum rutrum in in lacus. In
+                maximus felis at nunc efficitur mattis. In mollis cursus est in volutpat.
+            </p>
+            <p>
+                Sed sollicitudin eget elit ac molestie. Nulla sit amet odio mollis, dictum dolor eu, faucibus massa.
+                Vivamus quis urna nisl. Vivamus commodo faucibus ex, laoreet posuere justo eleifend eget. Integer ac
+                nibh ultricies, molestie augue auctor, commodo quam. Maecenas pharetra purus justo. Etiam egestas justo
+                justo. Nullam sed purus porta, sagittis nibh at, finibus velit.
+            </p>
+            <p>
+                Vestibulum blandit consectetur dui eleifend laoreet. Curabitur at eros bibendum, efficitur turpis at,
+                condimentum ipsum. In at tempus elit. Suspendisse tristique mollis tortor dignissim dictum. Integer at
+                ipsum eget lacus accumsan elementum non nec nisl. Duis ornare sodales massa, a rutrum elit vehicula id.
+                Praesent mattis augue a tempus maximus. Nam imperdiet sit amet magna non bibendum. Cras molestie elit
+                pulvinar vestibulum euismod.
+            </p>
+            <p>
+                Nam sit amet venenatis ligula. Suspendisse potenti. Donec sagittis mattis lacinia. Phasellus in placerat
+                arcu. Maecenas quam nulla, scelerisque vel tincidunt vel, pretium eget quam. Morbi imperdiet, lorem ut
+                scelerisque congue, nisi magna condimentum libero, id pellentesque tellus magna ut tellus. Phasellus
+                elementum magna sed nisl ullamcorper, sed condimentum erat feugiat.
+            </p>
+            <p>
+                Vivamus a erat placerat, pharetra massa sit amet, suscipit lorem. Maecenas nec dolor sed ipsum euismod
+                consectetur et pharetra enim. Duis eleifend ut turpis sit amet maximus. Mauris nec sem viverra, congue
+                enim eget, egestas metus. Nunc pellentesque, augue non aliquet pulvinar, felis nunc interdum purus, id
+                placerat ante eros tempus libero. Curabitur a consectetur nulla, malesuada viverra ipsum. Ut iaculis
+                turpis ut urna pulvinar placerat. Suspendisse in dignissim justo, eget accumsan ex. In varius justo et
+                velit gravida, id finibus mi iaculis. Integer in enim dictum, aliquam orci a, porttitor purus. Sed est
+                diam, ornare a odio eu, ornare fringilla eros. Etiam efficitur tincidunt lobortis. Vivamus sed mauris eu
+                tellus aliquam rhoncus vel a enim. Vivamus dignissim quis nibh sed ultricies. Phasellus eget consectetur
+                metus. Pellentesque suscipit elementum varius.
+            </p>
+        </div>
+    </content>
+
+    <script>
+        window.onload = function () {
+            if (getParameterByName('min') == 1) {
+                document.getElementById('detalhes').classList.add('minificado');
+                changeAnimeLink('anime', 'animeLink');
+            }
+        }
+    </script>
+</body>
+
+</html>
