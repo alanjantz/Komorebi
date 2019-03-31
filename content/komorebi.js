@@ -9,6 +9,8 @@ var animes =
 function appendChild(elementId) {
   var element = document.getElementById(elementId);
 
+  animes.sort();
+
   for (var i = 0; i < animes.length; i++) {
     var div = document.createElement("div");
     div.innerHTML += `<button class="anime-button not-growing-padding transation-effect-05s" value="` + animes[i].nome + `" 

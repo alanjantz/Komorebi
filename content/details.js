@@ -75,3 +75,17 @@ function changeBackgroundPage(anime) {
 
     element.style.backgroundImage = "url('resources/images/wallpapers/" + anime + ".png')";
 }
+
+function adicionarCategorias(lista) {
+    lista.sort();
+    for (var i = 0; i < lista.length; i++) {
+        adicionarElemento(lista[i]);
+    }
+}
+
+function adicionarElemento(texto) {
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode(texto);
+    node.appendChild(textnode);
+    document.getElementById("categorias").appendChild(node);
+}

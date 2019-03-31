@@ -20,11 +20,7 @@
                         <h2>B: The Beginning</h2>
                         <h4>B: O Começo</h4>
                     </a>
-                    <ul class="categorias">
-                        <li>Ação</li>
-                        <li>Sci-Fi</li>
-                        <li>Superpoderes</li>
-                        <li>Suspense</li>
+                    <ul id="categorias" class="categorias">
                     </ul>
                     <p>
                         <b>Sinopse</b>: Em um mundo alimentado por tecnologia avançada, o crime e a ação se desenrolam
@@ -126,8 +122,10 @@
                     ]
                 }
             ]
-
             createTable(temporadas);
+
+            var categorias = ["Ação", "Sci-Fi", "Superpoderes", "Suspense"];
+            adicionarCategorias(categorias);
         }
     </script>
 </body>
